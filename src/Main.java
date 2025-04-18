@@ -5,8 +5,8 @@ public class Main {
     private static final Random RANDOM = new Random();
 
     public static void main(String[] args) {
-        int[] numbers = new int[10];
-        String[] names = {"Ilya", "Elena", "Андрей"};
+        // int[] numbers = new int[10];
+        // String[] names = {"Ilya", "Elena", "Андрей"};
 
         //System.out.println(numbers);
 
@@ -23,7 +23,7 @@ public class Main {
          */
 
         // Запись значение
-        numbers[0] = 1;
+        // numbers[0] = 1;
 
         // System.out.println(numbers[0]);
         // System.out.println(names[1]);
@@ -32,8 +32,8 @@ public class Main {
         // System.out.println(average(1000));
         // System.out.println(averageV2(1000));
 
-        int[][] matrix = new int[10][10];
-        int[][] grid = {{1, 2}, {3, 4}};
+        // int[][] matrix = new int[10][10];
+        // int[][] grid = {{1, 2}, {3, 4}};
 
         // print(matrix);
         // print(grid);
@@ -41,9 +41,21 @@ public class Main {
         // printIndex(matrix);
         // printIndex(grid);
 
-        int[][] data = createMatrix(10);
-        print(data);
-        sum(data);
+        // int[][] data = createMatrix(10);
+        // print(data);
+        // sum(data);
+
+        /**
+         * Lesson 5. Homework
+         * 1. Одномерные массивы.
+         * 1.1 Создайте метод, который выводит массив в консоль.
+         */
+
+        // System.out.println(bildArray(5));
+        // printArray(bildArray(5));
+        int[] array = {1, 2, 3, 4};
+        printArray(array);
+
     }
 
     // O(2n)
@@ -118,5 +130,27 @@ public class Main {
             }
             System.out.printf("Строка %s: сумма = %s\n", i, sum);
         }
+
     }
+
+    /**
+     * Lesson 5. Homework
+     * 1. Одномерные массивы.
+     * 1.1 Создайте метод, который выводит массив в консоль.
+     */
+static int[] bildArray(int size) {
+    int[] array = new int[size];
+    for (int i = 0; i < array.length; i++) {
+        array[i] = RANDOM.nextInt(100);
+    }
+    return array;
+}
+
+static void printArray(int[] array) {
+    for (int j : array) {
+        System.out.println(j);
+    }
+
+}
+
 }
