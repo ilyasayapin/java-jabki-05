@@ -55,7 +55,10 @@ public class Main {
         printArray(array);
 
         //2.1 Напишите метод, который принимает массив целых чисел и возвращает сумму всех его элементов.
-        System.out.println(sumElements(array));
+        System.out.println("Сумма элементов массива: " + sumElements(array));
+
+        //3.1 Реализуйте метод для поиска минимального элемента в одномерном массиве
+        System.out.println("Минимальный элемент массива: " + minimum(array));
 
     }
 
@@ -156,12 +159,22 @@ public class Main {
     //2.1 Напишите метод, который принимает массив целых чисел и возвращает сумму всех его элементов.
     static int sumElements(int[] array) {
         int summ = 0;
-        for (int i=0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             summ += array[i];
         }
         return summ;
     }
 
+    //3.1 Реализуйте метод для поиска минимального элемента в одномерном массиве
+    static int minimum(int[] array) {
+        int minn = array[0];
+        for (int j = 1; j < array.length; j++) {
+            if (minn > array[j]) {
+                minn = array[j];
+            }
+        }
+        return minn;
+    }
 
 
 }
