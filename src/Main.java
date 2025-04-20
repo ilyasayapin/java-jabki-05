@@ -51,7 +51,7 @@ public class Main {
          */
 
         //1.1 Создайте метод, который выводит массив в консоль.
-        int[] array = {1, 2, 3, 4};
+        int[] array = {1, 2, 3, 4, 1};
         printArray(array);
 
         //1.2 Напишите метод, который принимает массив целых чисел и возвращает сумму всех его элементов.
@@ -70,6 +70,7 @@ public class Main {
         printArray(arayToReverse(array));
 
         //1.6 Напишите метод, который проверяет, есть ли в массиве повторяющиеся элементы
+        chekArrayForRepeating(array);
 
 
     }
@@ -213,8 +214,8 @@ public class Main {
     static void chekArrayForRepeating(int[] array) {
         boolean chek = false;
         for (int i = 0;  i < array.length; i++) {
-            for (int j = 1; j < array.length; j++) {
-                if (array[i] = array[j]) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] == array[j]) {
                     chek = true;
                 }
             }
