@@ -69,6 +69,8 @@ public class Main {
         printArray(array);
         printArray(arayToReverse(array));
 
+        //1.6 Напишите метод, который проверяет, есть ли в массиве повторяющиеся элементы
+
 
     }
 
@@ -205,5 +207,18 @@ public class Main {
             arrReverse[a] = array[k - 1 - a];
         }
         return arrReverse;
+    }
+
+    //1.6 Напишите метод, который проверяет, есть ли в массиве повторяющиеся элементы
+    static void chekArrayForRepeating(int[] array) {
+        boolean chek = false;
+        for (int i = 0;  i < array.length; i++) {
+            for (int j = 1; j < array.length; j++) {
+                if (array[i] = array[j]) {
+                    chek = true;
+                }
+            }
+        }
+        System.out.println("В массиве есть повторяющиеся эелементы? - " + chek);
     }
 }
