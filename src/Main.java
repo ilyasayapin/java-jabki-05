@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Random;
 
 public class Main {
@@ -85,6 +86,8 @@ public class Main {
         //2.3. Реализуйте поиск максимального элемента в матрице и вывод его координат (строка, столбец)
         findMaxElementOfMatrix(matrixx);
 
+        //2.4 Реализуйте проверку, является ли двумерный массив квадратным (количество строк = количеству столбцов)
+        chekArrayForKvadratish(matrixx);
     }
 
     // O(2n)
@@ -273,6 +276,19 @@ public class Main {
                 }
             }
         }
+    }
+
+    //2.4 Реализуйте проверку, является ли двумерный массив квадратным (количество строк = количеству столбцов)
+    static void chekArrayForKvadratish(int[][] matrixx) {
+        boolean chekKvadratish = false;
+        int z = matrixx.length;
+        int w = matrixx[0].length;
+        if (z == w) {
+            chekKvadratish = true;
+        }
+            System.out.println("Эта матрица квадратная? - " + chekKvadratish);
 
     }
+
+
 }
