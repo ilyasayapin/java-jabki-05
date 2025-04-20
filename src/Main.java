@@ -91,6 +91,9 @@ public class Main {
 
         //2.5 Напишите метод, который находит сумму элементов каждой строки, минимальное и максимальное значение двумерного массива и выводит результаты
         superMethod(matrixx);
+
+        //2.6 Создайте двумерный массив, заполните его так, чтобы элементы на четных позициях были 0, на нечетных — 1.
+         print(bildArray(3,3));
     }
 
     // O(2n)
@@ -171,13 +174,6 @@ public class Main {
     /**
      * Lesson 5. Homework
      * 1. Одномерные массивы.
-     *  static int[] bildArray(int size) {
-     *         int[] array = new int[size];
-     *         for (int i = 0; i < array.length; i++) {
-     *             array[i] = RANDOM.nextInt(100);
-     *         }
-     *     return array;
-     *     }
      */
 
     //1.1 Создайте метод, который выводит массив в консоль.
@@ -315,4 +311,21 @@ public class Main {
         System.out.println("Минимальное значение: " + minZnach);
         System.out.println("Максимальное значение: " + maxZnach);
     }
+
+    //2.6 Создайте двумерный массив, заполните его так, чтобы элементы на четных позициях были 0, на нечетных — 1.
+    static int[][] bildArray(int rows, int columns ) {
+             int[][] newArray = new int[rows][columns];
+              for (int i = 0; i < rows; i++) {
+                  for (int j =0; j < columns; j++) {
+                      if (i % 2 == 0 && j % 2 == 0) {
+                          newArray[i][j] = 0;
+                      } else {
+                          newArray[i][j] = 1;
+                      }
+                  }
+              }
+          return newArray;
+     }
+
+
 }
