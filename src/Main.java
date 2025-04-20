@@ -64,6 +64,11 @@ public class Main {
         String[] month = {"Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"};
         strokiNaM(month);
 
+        //1.5 Напишите метод, который инвертирует порядок элементов в одномерном массиве.
+        arayToReverse(array);
+        printArray(array);
+        printArray(arayToReverse(array));
+
 
     }
 
@@ -157,8 +162,9 @@ public class Main {
     //1.1 Создайте метод, который выводит массив в консоль.
     static void printArray(int[] array) {
         for (int j : array) {
-            System.out.println(j);
+            System.out.print(j + " ");
         }
+        System.out.println();
     }
 
     //1.2 Напишите метод, который принимает массив целых чисел и возвращает сумму всех его элементов.
@@ -189,7 +195,15 @@ public class Main {
                 System.out.println(name);
             };
         }
-
     }
 
+    //1.5 Напишите метод, который инвертирует порядок элементов в одномерном массиве.
+    static int[] arayToReverse(int[] array) {
+        int k = array.length;
+        int[] arrReverse = new int[k];
+        for (int a = 0; a < k; a++) {
+            arrReverse[a] = array[k - 1 - a];
+        }
+        return arrReverse;
+    }
 }
