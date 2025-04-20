@@ -90,6 +90,7 @@ public class Main {
         chekArrayForKvadratish(matrixx);
 
         //2.5 Напишите метод, который находит сумму элементов каждой строки, минимальное и максимальное значение двумерного массива и выводит результаты
+        superMethod(matrixx);
     }
 
     // O(2n)
@@ -289,11 +290,29 @@ public class Main {
             chekKvadratish = true;
         }
             System.out.println("Эта матрица квадратная? - " + chekKvadratish);
+        System.out.println();
 
     }
 
     //2.5 Напишите метод, который находит сумму элементов каждой строки, минимальное и максимальное значение двумерного массива и выводит результаты
-    static int superMethod(int[][] matrixx) {
-
+    static void superMethod(int[][] matrixx) {
+        int minZnach = matrixx[0][0];
+        int maxZnach = matrixx[0][0];
+        for (int c = 0; c < matrixx.length; c++) {
+            int sumPoStroke = 0;
+            for (int d = 0; d < matrixx[c].length; d++) {
+                sumPoStroke += matrixx[c][d];
+                if (minZnach > matrixx[c][d]) {
+                    minZnach = matrixx[c][d];
+                }
+                if (maxZnach < matrixx[c][d]) {
+                    maxZnach = matrixx[c][d];
+                }
+            }
+            System.out.printf("Строка %s: сумма = %s", c, sumPoStroke);
+            System.out.println();
+        }
+        System.out.println("Минимальное значение: " + minZnach);
+        System.out.println("Максимальное значение: " + maxZnach);
     }
 }
