@@ -48,13 +48,14 @@ public class Main {
         /**
          * Lesson 5. Homework
          * 1. Одномерные массивы.
-         * 1.1 Создайте метод, который выводит массив в консоль.
          */
 
-        // System.out.println(bildArray(5));
-        // printArray(bildArray(5));
+        //1.1 Создайте метод, который выводит массив в консоль.
         int[] array = {1, 2, 3, 4};
         printArray(array);
+
+        //2.1 Напишите метод, который принимает массив целых чисел и возвращает сумму всех его элементов.
+        System.out.println(sumElements(array));
 
     }
 
@@ -136,21 +137,31 @@ public class Main {
     /**
      * Lesson 5. Homework
      * 1. Одномерные массивы.
-     * 1.1 Создайте метод, который выводит массив в консоль.
+     *  static int[] bildArray(int size) {
+     *         int[] array = new int[size];
+     *         for (int i = 0; i < array.length; i++) {
+     *             array[i] = RANDOM.nextInt(100);
+     *         }
+     *     return array;
+     *     }
      */
-static int[] bildArray(int size) {
-    int[] array = new int[size];
-    for (int i = 0; i < array.length; i++) {
-        array[i] = RANDOM.nextInt(100);
-    }
-    return array;
-}
 
-static void printArray(int[] array) {
-    for (int j : array) {
-        System.out.println(j);
+    //1.1 Создайте метод, который выводит массив в консоль.
+    static void printArray(int[] array) {
+        for (int j : array) {
+            System.out.println(j);
+        }
     }
 
-}
+    //2.1 Напишите метод, который принимает массив целых чисел и возвращает сумму всех его элементов.
+    static int sumElements(int[] array) {
+        int summ = 0;
+        for (int i=0; i < array.length; i++) {
+            summ += array[i];
+        }
+        return summ;
+    }
+
+
 
 }
