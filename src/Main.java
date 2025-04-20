@@ -80,6 +80,7 @@ public class Main {
         print(matrixx);
 
         // 2.2 Напишите метод, вычисляющий сумму всех элементов в двумерном массиве
+        System.out.println("Сумма элементов двумерного массива: " + sumElementsOfMatrix(matrixx));
 
     }
 
