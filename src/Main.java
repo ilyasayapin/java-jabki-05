@@ -51,7 +51,7 @@ public class Main {
          */
 
         //1.1 Создайте метод, который выводит массив в консоль.
-        int[] array = {1, 2, 3, 4, 1};
+        int[] array = {1, 2, 3, 4, 1, -2};
         printArray(array);
 
         //1.2 Напишите метод, который принимает массив целых чисел и возвращает сумму всех его элементов.
@@ -65,12 +65,15 @@ public class Main {
         strokiNaM(month);
 
         //1.5 Напишите метод, который инвертирует порядок элементов в одномерном массиве.
-        arayToReverse(array);
         printArray(array);
-        printArray(arayToReverse(array));
+        printArray(arrayToReverse(array));
 
         //1.6 Напишите метод, который проверяет, есть ли в массиве повторяющиеся элементы
         chekArrayForRepeating(array);
+
+        //1.7 Напишите метод, который заменяет все отрицательные числа в массиве на их абсолютные значения.
+        System.out.print("Массив из асболютных значений: ");
+        printArray(chekForMinus(array));
 
 
     }
@@ -201,7 +204,7 @@ public class Main {
     }
 
     //1.5 Напишите метод, который инвертирует порядок элементов в одномерном массиве.
-    static int[] arayToReverse(int[] array) {
+    static int[] arrayToReverse(int[] array) {
         int k = array.length;
         int[] arrReverse = new int[k];
         for (int a = 0; a < k; a++) {
@@ -222,4 +225,19 @@ public class Main {
         }
         System.out.println("В массиве есть повторяющиеся эелементы? - " + chek);
     }
+
+    //1.7 Напишите метод, который заменяет все отрицательные числа в массиве на их абсолютные значения.
+    static int[] chekForMinus(int[] array) {
+        int k = array.length;
+        int[] positiveArray = new int[k];
+        for (int a = 0; a < k; a++) {
+            if (array[a] < 0) {
+                positiveArray[a] = Math.abs(array[a]);
+            } else {
+                positiveArray[a] = array[a];
+            }
+        }
+        return positiveArray;
+    }
+
 }
