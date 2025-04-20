@@ -93,7 +93,7 @@ public class Main {
         superMethod(matrixx);
 
         //2.6 Создайте двумерный массив, заполните его так, чтобы элементы на четных позициях были 0, на нечетных — 1.
-         print(bildArray(3,3));
+         print(bildArray(4,4));
     }
 
     // O(2n)
@@ -317,7 +317,7 @@ public class Main {
              int[][] newArray = new int[rows][columns];
               for (int i = 0; i < rows; i++) {
                   for (int j =0; j < columns; j++) {
-                      if (i % 2 == 0 && j % 2 == 0) {
+                      if ((i + j) % 2 == 0) {
                           newArray[i][j] = 0;
                       } else {
                           newArray[i][j] = 1;
