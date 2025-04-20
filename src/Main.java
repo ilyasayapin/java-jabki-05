@@ -75,12 +75,15 @@ public class Main {
         System.out.print("Массив из асболютных значений: ");
         printArray(chekForMinus(array));
 
-        // 2.1 Создайте двумерный массив 3x3, заполните его единицами на главной диагонали и нулями в остальных ячейках. Выведите массив
+        //2.1 Создайте двумерный массив 3x3, заполните его единицами на главной диагонали и нулями в остальных ячейках. Выведите массив
         int [][] matrixx = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
         print(matrixx);
 
-        // 2.2 Напишите метод, вычисляющий сумму всех элементов в двумерном массиве
+        //2.2 Напишите метод, вычисляющий сумму всех элементов в двумерном массиве
         System.out.println("Сумма элементов двумерного массива: " + sumElementsOfMatrix(matrixx));
+
+        //2.3. Реализуйте поиск максимального элемента в матрице и вывод его координат (строка, столбец)
+        findMaxElementOfMatrix(matrixx);
 
     }
 
@@ -226,6 +229,7 @@ public class Main {
             for (int j = i + 1; j < array.length; j++) {
                 if (array[i] == array[j]) {
                     chek = true;
+                    break;
                 }
             }
         }
@@ -257,5 +261,18 @@ public class Main {
         return summ;
     }
 
+    //2.3. Реализуйте поиск максимального элемента в матрице и вывод его координат (строка, столбец)
+    static void findMaxElementOfMatrix(int[][] matrixx) {
+        int maxxElement = matrixx[0][0];
+        for (int g = 0; g < matrixx.length; g++) {
+            for (int h = 0; h < matrixx[g].length; h++) {
+                if (maxxElement <= matrixx[g][h]) {
+                    maxxElement = matrixx[g][h];
+                    System.out.printf("Максимальный элемент в матрице: " + maxxElement + " (%s,%s) ", g, h);
+                    System.out.println();
+                }
+            }
+        }
 
+    }
 }
