@@ -79,6 +79,8 @@ public class Main {
         int [][] matrixx = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
         print(matrixx);
 
+        // 2.2 Напишите метод, вычисляющий сумму всех элементов в двумерном массиве
+
     }
 
     // O(2n)
@@ -243,8 +245,16 @@ public class Main {
         return positiveArray;
     }
 
-    // 2.1 Создайте двумерный массив 3x3, заполните его единицами на главной диагонали и нулями в остальных ячейках. Выведите массив
-
+    //2.2 Напишите метод, вычисляющий сумму всех элементов в двумерном массиве
+    static int sumElementsOfMatrix(int[][] matrixx) {
+        int summ = 0;
+        for (int x = 0; x < matrixx.length; x++) {
+            for (int y = 0; y < matrixx[x].length; y++) {
+                summ += matrixx[x][y];
+            }
+        }
+        return summ;
+    }
 
 
 }
