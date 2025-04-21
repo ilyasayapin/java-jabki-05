@@ -125,8 +125,6 @@ public class Main {
             arr[i] = RANDOM.nextInt(100);
             sum += arr[i];
         }
-
-
         return sum / size;
     }
 
