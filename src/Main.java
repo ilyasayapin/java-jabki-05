@@ -279,14 +279,11 @@ public class Main {
 
     //2.4 Реализуйте проверку, является ли двумерный массив квадратным (количество строк = количеству столбцов)
     static void chekArrayForKvadratish(int[][] matrixx) {
-        boolean chekKvadratish = false;
-        int z = matrixx.length;
-        int w = matrixx[0].length;
-        if (z == w) {
-            chekKvadratish = true;
+        if (matrixx.length == matrixx[0].length) {
+            System.out.println("Эта матрица квадратная");
+        } else {
+            System.out.println("Эта матрица НЕ квадратная");
         }
-            System.out.println("Эта матрица квадратная? - " + chekKvadratish);
-        System.out.println();
 
     }
 
