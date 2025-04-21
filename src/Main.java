@@ -77,7 +77,7 @@ public class Main {
         printArray(chekForMinus(array));
 
         //2.1 Создайте двумерный массив 3x3, заполните его единицами на главной диагонали и нулями в остальных ячейках. Выведите массив
-        int [][] matrixx = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
+        int[][] matrixx = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
         print(matrixx);
 
         //2.2 Напишите метод, вычисляющий сумму всех элементов в двумерном массиве
@@ -93,7 +93,7 @@ public class Main {
         superMethod(matrixx);
 
         //2.6 Создайте двумерный массив, заполните его так, чтобы элементы на четных позициях были 0, на нечетных — 1.
-         print(bildArray(4,4));
+         print(bildArray(-2,4));
     }
 
     // O(2n)
@@ -308,7 +308,10 @@ public class Main {
 
     //2.6 Создайте двумерный массив, заполните его так, чтобы элементы на четных позициях были 0, на нечетных — 1.
     static int[][] bildArray(int rows, int columns ) {
-             int[][] newArray = new int[rows][columns];
+        if (rows <= 0 || columns <= 0) {
+            throw new IllegalArgumentException("Неверные входные параметры массива");
+        }
+        int[][] newArray = new int[rows][columns];
               for (int i = 0; i < rows; i++) {
                   for (int j =0; j < columns; j++) {
                       if ((i + j) % 2 == 0) {
