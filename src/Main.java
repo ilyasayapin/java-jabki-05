@@ -93,7 +93,7 @@ public class Main {
         superMethod(matrixx);
 
         //2.6 Создайте двумерный массив, заполните его так, чтобы элементы на четных позициях были 0, на нечетных — 1.
-         print(buildArray(4,4));
+         print(buildArray(3,3));
     }
 
     // O(2n)

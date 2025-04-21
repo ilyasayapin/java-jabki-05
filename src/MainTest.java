@@ -24,8 +24,15 @@ class MainTest {
 
     @Test
     void buidArray() {
-        int testRows = -1;
-        int testColumns = 2;
+        int testRows = -1, testColumns = 2;
         assertThrows(IllegalArgumentException.class, () -> Main.buildArray(testRows, testColumns));
+    }
+
+    @Test
+    void buidArraySecondTest() {
+        int testRows = 3, testColumns = 3;
+        int[][] testMatrix = {{0, 1, 0}, {1, 0, 1}, {0, 1, 0}};
+        assertArrayEquals(testMatrix, Main.buildArray(testRows, testColumns));
+
     }
 }
