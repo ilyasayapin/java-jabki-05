@@ -26,6 +26,6 @@ class MainTest {
     void buidArray() {
         int testRows = -1;
         int testColumns = 2;
-        assertThrows(IllegalArgumentException.class, () -> Main.bildArray(testRows, testColumns));
+        assertThrows(IllegalArgumentException.class, () -> Main.buildArray(testRows, testColumns));
     }
 }

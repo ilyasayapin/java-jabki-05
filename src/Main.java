@@ -93,7 +93,7 @@ public class Main {
         superMethod(matrixx);
 
         //2.6 Создайте двумерный массив, заполните его так, чтобы элементы на четных позициях были 0, на нечетных — 1.
-         print(bildArray(-2,4));
+         print(buildArray(4,4));
     }
 
     // O(2n)
@@ -233,7 +233,7 @@ public class Main {
                 }
             }
         }
-        System.out.println("В массиве есть повторяющиеся эелементы? - " + chek);
+        System.out.println("В массиве есть повторяющиеся элементы? - " + chek);
     }
 
     //1.7 Напишите метод, который заменяет все отрицательные числа в массиве на их абсолютные значения.
@@ -307,7 +307,7 @@ public class Main {
     }
 
     //2.6 Создайте двумерный массив, заполните его так, чтобы элементы на четных позициях были 0, на нечетных — 1.
-    static int[][] bildArray(int rows, int columns ) {
+    static int[][] buildArray(int rows, int columns ) {
         if (rows <= 0 || columns <= 0) {
             throw new IllegalArgumentException("Неверные входные параметры массива");
         }
@@ -323,4 +323,5 @@ public class Main {
               }
           return newArray;
      }
+
 }
