@@ -313,7 +313,7 @@ public class Main {
         }
         int[][] newArray = new int[rows][columns];
               for (int i = 0; i < rows; i++) {
-                  for (int j =0; j < columns; j++) {
+                  for (int j = 0; j < columns; j++) {
                       if ((i + j) % 2 == 0) {
                           newArray[i][j] = 0;
                       } else {
