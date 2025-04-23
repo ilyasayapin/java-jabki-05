@@ -70,11 +70,11 @@ public class Main {
         printArray(arrayToReverse(array));
 
         // 1.6 Напишите метод, который проверяет, есть ли в массиве повторяющиеся элементы
-        chekArrayForRepeating(array);
+        cheсkArrayForRepeating(array);
 
         // 1.7 Напишите метод, который заменяет все отрицательные числа в массиве на их абсолютные значения.
         System.out.print("Массив из асболютных значений: ");
-        printArray(chekForMinus(array));
+        printArray(cheсkForMinus(array));
 
         // 2.1 Создайте двумерный массив 3x3, заполните его единицами на главной диагонали и нулями в остальных ячейках. Выведите массив
         int[][] matrixx = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
@@ -223,7 +223,7 @@ public class Main {
     }
 
     // 1.6 Напишите метод, который проверяет, есть ли в массиве повторяющиеся элементы
-    static void chekArrayForRepeating(int[] array) {
+    static void cheсkArrayForRepeating(int[] array) {
         boolean chek = false;
         for (int i = 0;  i < array.length; i++) {
             for (int j = i + 1; j < array.length; j++) {
@@ -237,7 +237,7 @@ public class Main {
     }
 
     // 1.7 Напишите метод, который заменяет все отрицательные числа в массиве на их абсолютные значения.
-    static int[] chekForMinus(int[] array) {
+    static int[] cheсkForMinus(int[] array) {
         int k = array.length;
         int[] positiveArray = new int[k];
         for (int a = 0; a < k; a++) {
