@@ -224,16 +224,16 @@ public class Main {
 
     // 1.6 Напишите метод, который проверяет, есть ли в массиве повторяющиеся элементы
     static void cheсkArrayForRepeating(int[] array) {
-        boolean chek = false;
+        boolean cheсk = false;
         for (int i = 0;  i < array.length; i++) {
             for (int j = i + 1; j < array.length; j++) {
                 if (array[i] == array[j]) {
-                    chek = true;
+                    cheсk = true;
                     break;
                 }
             }
         }
-        System.out.println("В массиве есть повторяющиеся элементы? - " + chek);
+        System.out.println("В массиве есть повторяющиеся элементы? - " + cheсk);
     }
 
     // 1.7 Напишите метод, который заменяет все отрицательные числа в массиве на их абсолютные значения.
