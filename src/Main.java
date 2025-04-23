@@ -264,15 +264,19 @@ public class Main {
     // 2.3. Реализуйте поиск максимального элемента в матрице и вывод его координат (строка, столбец)
     static void findMaxElementOfMatrix(int[][] matrixx) {
         int maxxElement = matrixx[0][0];
+        int firstIndex = 0;
+        int secondIndex = 0;
         for (int g = 0; g < matrixx.length; g++) {
             for (int h = 0; h < matrixx[g].length; h++) {
-                if (maxxElement < matrixx[g][h]) {
+                if (maxxElement <= matrixx[g][h]) {
                     maxxElement = matrixx[g][h];
-                    System.out.printf("Максимальный элемент в матрице: " + maxxElement + " (%s,%s) ", g, h);
-                    System.out.println();
+                    firstIndex = g;
+                    secondIndex = h;
                 }
             }
         }
+        System.out.printf("Максимальный элемент в матрице: " + maxxElement + " (%s,%s) ", firstIndex, secondIndex);
+        System.out.println();
     }
 
     // 2.4 Реализуйте проверку, является ли двумерный массив квадратным (количество строк = количеству столбцов)
