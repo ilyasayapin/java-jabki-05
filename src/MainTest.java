@@ -7,7 +7,7 @@ class MainTest {
     @Test
     void sumElements() {
         int[] testArray = {1, 1, 1, 1, 1};
-        Assertions.assertEquals(5, Main.sumElements(testArray));
+        Assertions.assertEquals(5, Main.sum(testArray));
     }
 
     @Test
