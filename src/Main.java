@@ -73,7 +73,7 @@ public class Main {
         cheсkArrayForRepeating(array);
 
         // 1.7 Напишите метод, который заменяет все отрицательные числа в массиве на их абсолютные значения.
-        System.out.print("Массив из асболютных значений: ");
+        System.out.print("Массив из абcолютных значений: ");
         printArray(cheсkForMinus(array));
 
         // 2.1 Создайте двумерный массив 3x3, заполните его единицами на главной диагонали и нулями в остальных ячейках. Выведите массив
@@ -238,16 +238,12 @@ public class Main {
 
     // 1.7 Напишите метод, который заменяет все отрицательные числа в массиве на их абсолютные значения.
     static int[] cheсkForMinus(int[] array) {
-        int k = array.length;
-        int[] positiveArray = new int[k];
-        for (int a = 0; a < k; a++) {
+        for (int a = 0; a < array.length; a++) {
             if (array[a] < 0) {
-                positiveArray[a] = Math.abs(array[a]);
-            } else {
-                positiveArray[a] = array[a];
+                array[a] = Math.abs(array[a]);
             }
         }
-        return positiveArray;
+        return array;
     }
 
     // 2.2 Напишите метод, вычисляющий сумму всех элементов в двумерном массиве
